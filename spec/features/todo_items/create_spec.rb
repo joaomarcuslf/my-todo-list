@@ -1,0 +1,27 @@
+require "rails_helper"
+
+describe "Creating todo items" do
+  let!(:todo_list) {
+		TodoList.create(title: "My list", description: "My todo list")
+	}
+
+	def visit_the(list)
+    visit "/todo_lists"
+    within "#todo_list_#{list.id}" do
+      click_link "View items"
+    end
+	end
+
+  it "is successful with valid content" do
+    visit_the todo_list
+
+    click_link "New Todo item"
+    fill_in "Content", with: "Ruby"
+    click_button "Save"
+
+    expect(page).to have_content("Added todo list item.")
+    within("ul.todo_items") do
+		    expect(page).to have_content("Ruby")
+		end
+  end
+end
