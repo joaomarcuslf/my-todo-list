@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+div {
+  padding: 1em;
+  font-size: 1em;
+}
+
+ div.alert {
+   border: 2px dashed #68246e;
+   color: #0b4139;
+ }
+
+ div.flash.success {
+   border: 2px dashed #32801b;
+   color: #32801b;
+ }
+
+ div.flash.error {
+   border: 2px dashed #c30505;
+   color: #c30505;
+ }
