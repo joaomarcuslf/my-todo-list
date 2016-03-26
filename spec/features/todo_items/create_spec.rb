@@ -24,4 +24,17 @@ describe "Creating todo items" do
 		    expect(page).to have_content("Ruby")
 		end
   end
+
+  it "displays an error with no content" do
+    visit_the todo_list
+
+    click_link "New Todo item"
+    fill_in "Content", with: ""
+    click_button "Save"
+
+    within("div.flash") do
+      expect(page).to have_content("Something went wrong")
+    end
+    expect(page).to have_content("Content can't be blank")
+  end
 end
