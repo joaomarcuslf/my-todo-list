@@ -17,10 +17,10 @@
         <td><%= todo_list.title %></td>
         <td><%= todo_list.description %></td>
         <td>
-          <%= link_to "View items", todo_list_todo_items_path(todo_list.id) %>
-          <%= link_to 'Show', todo_list %>
-          <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
-          <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to "View items", todo_list_todo_items_path(todo_list.id), class: "btn btn-default" %>
+          <%= link_to 'Show', todo_list, class: "btn btn-success" %>
+          <%= link_to 'Edit', edit_todo_list_path(todo_list), class: "btn btn-primary" %>
+          <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
       </td>
       </tr>
     <% end %>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Todo list', new_todo_list_path %>
+<%= link_to 'New Todo list', new_todo_list_path, class: "btn btn-warning" %>
