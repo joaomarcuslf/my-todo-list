@@ -14,6 +14,13 @@
  *= require_self
  */
 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .form-label {
+   font-size: 2em;
+ }
+
 div {
   padding: 1em;
   font-size: 1em;
@@ -33,3 +40,7 @@ div {
    border: 2px dashed #c30505;
    color: #c30505;
  }
+
+a {
+  background-color: transparent;
+}
