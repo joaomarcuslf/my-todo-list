@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Todo Lists</h1>
+<h1 style="font-weight: 600">Listing Todo Lists</h1>
 
-<table>
+<hr>
+
+<table width="100%">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
+      <th style="font-size: 1.5em;">Title</th>
+      <th style="font-size: 1.5em;">Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,5 +30,7 @@
 </table>
 
 <br>
+<hr>
+<br>
 
-<%= link_to 'New Todo list', new_todo_list_path, class: "btn btn-warning" %>
+<%= link_to 'New Todo list', new_todo_list_path, class: "btn btn-warning btn-block" %>
