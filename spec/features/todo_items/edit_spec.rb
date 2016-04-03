@@ -6,13 +6,6 @@ describe "Editing todo items" do
 	}
   let!(:todo_item) { todo_list.todo_items.create( content: "Ruby") }
 
-	def visit_the(list)
-    visit "/todo_lists"
-    within "#todo_list_#{list.id}" do
-      click_link "View items"
-    end
-	end
-
   it "updates a todo item successfully with valid content" do
     visit_the todo_list
 
