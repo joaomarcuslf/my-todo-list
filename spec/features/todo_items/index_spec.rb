@@ -5,14 +5,7 @@ describe "Viewing todo items" do
 		TodoList.create(title: "My list", description: "My todo list")
 	}
 
-	def visit_the(list)
-		visit "/todo_lists"
-		within "#todo_list_#{list.id}" do
-			click_link "View items"
-		end
-	end
-
-	it "displays the title of the todo list" do
+  it "displays the title of the todo list" do
 		visit_the todo_list
 		within("h3") do
 			expect(page).to have_content(todo_list.title)

@@ -5,13 +5,6 @@ describe "Creating todo items" do
 		TodoList.create(title: "My list", description: "My todo list")
 	}
 
-	def visit_the(list)
-    visit "/todo_lists"
-    within "#todo_list_#{list.id}" do
-      click_link "View items"
-    end
-	end
-
   it "is successful with valid content" do
     visit_the todo_list
 
