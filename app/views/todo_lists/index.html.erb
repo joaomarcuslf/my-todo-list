@@ -3,7 +3,8 @@
 <h1 style="font-weight: 600">Listing Todo Lists</h1>
 
 <hr>
-
+<%= link_to 'New Todo list', new_todo_list_path, class: "btn btn-warning btn-block" %>
+<br>
 <table width="100%">
   <thead>
     <tr>
@@ -23,14 +24,8 @@
           <%= link_to 'Show', todo_list, class: "btn btn-success" %>
           <%= link_to 'Edit', edit_todo_list_path(todo_list), class: "btn btn-primary" %>
           <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-      </td>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-<hr>
-<br>
-
-<%= link_to 'New Todo list', new_todo_list_path, class: "btn btn-warning btn-block" %>
